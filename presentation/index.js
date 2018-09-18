@@ -15,7 +15,6 @@ import {
   Notes,
   Image,
   Layout,
-  Fit,
   Fill,
   Appear,
   CodePane
@@ -49,7 +48,8 @@ const images = {
   legoLogo: require("../assets/lego_logo.png"),
   legoChart: require("../assets/lego_bar_chart.jpg"),
   kat: require("../assets/kat.png"),
-  highcharts: require("../assets/highcharts.png")
+  highcharts: require("../assets/highcharts.png"),
+  renderProps: require("../assets/render_props.jpg")
 };
 
 export default class Presentation extends React.Component {
@@ -361,6 +361,51 @@ export default class Presentation extends React.Component {
               <Quote>do one thing well.</Quote>
             </Appear>
           </BlockQuote>
+        </Slide>
+
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading size={5} lineHeight={1} textColor="primary">
+            What are the tools to build a LEGO-like charting lib?
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem>React - rendering engine</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>D3 - mathematical stuff</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <ol>
+              <li>not the only tools! you could use jquery all the way</li>
+            </ol>
+          </Notes>
+        </Slide>
+
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading size={5} lineHeight={1} textColor="primary">
+            Any methodology advice?
+          </Heading>
+          <Appear>
+            <Image src={images.renderProps.replace("/", "")} />
+          </Appear>
+        </Slide>
+
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading size={5} lineHeight={1} textColor="primary">
+            So close!
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem>Render Props</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Context API (the React 16.3 kind !)</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Compound Components</ListItem>
+            </Appear>
+          </List>
         </Slide>
       </Deck>
     );
