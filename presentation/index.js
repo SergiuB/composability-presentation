@@ -63,7 +63,6 @@ export default class Presentation extends React.Component {
             style={{
               justifyContent: "center",
               alignItems: "center",
-              marginBottom: "200px",
               textAlign: "left"
             }}
           >
@@ -83,12 +82,34 @@ export default class Presentation extends React.Component {
               Charts
             </Heading>
           </Layout>
-          <Text margin="10px" textColor="secondary" size={5} bold>
-            Sergiu Buciuc
+
+          <Text
+            size={3}
+            textColor="secondary"
+            style={{
+              margin: 10,
+              paddingTop: 15,
+              marginBottom: "200px"
+            }}
+          >
+            a composable way to building charts
           </Text>
-          <Text margin="10px" textColor="tertiary" size={5} bold>
-            @devserge
-          </Text>
+          <Link
+            margin="10px"
+            textColor="tertiary"
+            bold
+            href="https://twitter.com/SergiuBuciuc"
+          >
+            @SergiuBuciuc
+          </Link>
+          <Link
+            margin="10px"
+            textColor="tertiary"
+            bold
+            href="https://github.com/sergiub"
+          >
+            SergiuB
+          </Link>
           <Notes>
             <ol>
               <li>Why lego?</li>
@@ -220,9 +241,8 @@ export default class Presentation extends React.Component {
 
           <Notes>
             <ol>
-              <li>lodash-fp is more composable.</li>
               <li>
-                jquery is the 18-old kid you want out, but cute when small
+                unconstrained does not mean completely free of constraints
               </li>
               <li>constraints can be added, but later, see React vs JQuery</li>
             </ol>
@@ -241,6 +261,14 @@ export default class Presentation extends React.Component {
               <Quote textColor="tertiary">Composition!</Quote>
             </Appear>
           </BlockQuote>
+
+          <Notes>
+            <ol>
+              <li>
+                imagine configuring a complex service using some kind of xml
+              </li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide>
           <Image src={images.highcharts.replace("/", "")} height={300} />
@@ -285,7 +313,10 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>
             <ol>
-              <li>composability is good, but what are we composing?</li>
+              <li>
+                transition to next slide: composability is good, but what are we
+                composing?
+              </li>
             </ol>
           </Notes>
         </Slide>
