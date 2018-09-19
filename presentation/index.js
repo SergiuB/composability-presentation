@@ -17,7 +17,8 @@ import {
   Layout,
   Fill,
   Appear,
-  CodePane
+  CodePane,
+  Link
 } from "spectacle";
 
 // Import theme
@@ -49,7 +50,8 @@ const images = {
   legoChart: require("../assets/lego_bar_chart.jpg"),
   kat: require("../assets/kat.png"),
   highcharts: require("../assets/highcharts.png"),
-  renderProps: require("../assets/render_props.jpg")
+  renderProps: require("../assets/render_props.jpg"),
+  demo: require("../assets/demo.jpg")
 };
 
 export default class Presentation extends React.Component {
@@ -365,14 +367,14 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="secondary" textColor="primary">
           <Heading size={5} lineHeight={1} textColor="primary">
-            What are the tools to build a LEGO-like charting lib?
+            What are some good tools to build a composable charting library?
           </Heading>
           <List>
             <Appear>
               <ListItem>React - rendering engine</ListItem>
             </Appear>
             <Appear>
-              <ListItem>D3 - mathematical stuff</ListItem>
+              <ListItem>D3 - for the math stuff</ListItem>
             </Appear>
           </List>
           <Notes>
@@ -383,22 +385,20 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="secondary" textColor="primary">
-          <Heading size={5} lineHeight={1} textColor="primary">
-            Any methodology advice?
+          <Heading size={5} textColor="primary">
+            And any particular patterns?
           </Heading>
           <Appear>
             <Image src={images.renderProps.replace("/", "")} />
           </Appear>
+          <Appear>
+            <Link href="https://github.com/pedronauck/react-adopt">source</Link>
+          </Appear>
         </Slide>
 
         <Slide bgColor="secondary" textColor="primary">
-          <Heading size={5} lineHeight={1} textColor="primary">
-            So close!
-          </Heading>
           <List>
-            <Appear>
-              <ListItem>Render Props</ListItem>
-            </Appear>
+            <ListItem>Render Props</ListItem>
             <Appear>
               <ListItem>Context API (the React 16.3 kind !)</ListItem>
             </Appear>
@@ -407,6 +407,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
+
+        <Slide bgImage={images.demo.replace("/", "")} />
       </Deck>
     );
   }
