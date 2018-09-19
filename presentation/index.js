@@ -249,6 +249,27 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
 
+        <Slide>
+          <Image src={images.highcharts.replace("/", "")} height={300} />
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/highcharts.example")}
+            margin="20px auto"
+            overflow="auto"
+            style={{ height: "300px" }}
+          />
+
+          <Notes>
+            <ol>
+              <li>
+                in plot options - invents complicated language to describe an UI
+              </li>
+              <li>too many options - scary!</li>
+              <li>mixes JS in there</li>
+            </ol>
+          </Notes>
+        </Slide>
+
         <Slide bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Configuration is a form of constraint</Quote>
@@ -270,26 +291,7 @@ export default class Presentation extends React.Component {
             </ol>
           </Notes>
         </Slide>
-        <Slide>
-          <Image src={images.highcharts.replace("/", "")} height={300} />
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/highcharts.example")}
-            margin="20px auto"
-            overflow="auto"
-            style={{ height: "300px" }}
-          />
 
-          <Notes>
-            <ol>
-              <li>
-                in plot options - invents complicated language to describe an UI
-              </li>
-              <li>too many options - scary!</li>
-              <li>mixes JS in there</li>
-            </ol>
-          </Notes>
-        </Slide>
         <Slide bgColor="secondary" textColor="primary">
           <Heading size={5} lineHeight={1} textColor="primary">
             Problems with non-composable, highly configurable libraries/APIs
@@ -340,6 +342,13 @@ export default class Presentation extends React.Component {
             </Quote>
             <Cite>attributed to Albert Einstein</Cite>
           </BlockQuote>
+
+          <Notes>
+            <ol>
+              <li>Einstein, not sure...</li>
+              <li>sounds... simple, right?</li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide bgColor="secondary" textColor="primary">
           <Heading size={5} lineHeight={1} textColor="primary">
